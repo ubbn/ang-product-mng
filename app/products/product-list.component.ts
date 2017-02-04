@@ -10,6 +10,7 @@ export class ProductListCompnent {
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
+  listFilter: string = 'hammer';
   products: any[] = [
     {
         "productId": 1,
