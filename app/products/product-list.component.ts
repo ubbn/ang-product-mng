@@ -13,7 +13,7 @@ export class ProductListCompnent {
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
-  listFilter: string = 'hammer';
+  listFilter: string;
   products: IProduct[] = [
     {
         "productId": 1,
@@ -73,5 +73,13 @@ export class ProductListCompnent {
 
   onRatingClicked(message: string): void {
     this.pageTitle = 'Product list: ' + message;
+  }
+
+  onPriceClicked(price: number): void {
+      this.pageTitle = 'Price: ' + price + ' clicked';
+  }
+
+  onNameClicked(name: string): void {
+      this.pageTitle = 'Product name: ' + name + ' clicked';
   }
 }
