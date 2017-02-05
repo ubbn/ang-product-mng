@@ -1,3 +1,4 @@
+import { StarComponent } from './shared/star.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { ProductListCompnent } from './products/product-list.component';
@@ -13,7 +14,8 @@ import { AppComponent }  from './app.component';
   declarations: [ 
     AppComponent,
     ProductListCompnent,
-    ProductFilterPipe ],
+    ProductFilterPipe,
+    StarComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
