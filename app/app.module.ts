@@ -1,3 +1,4 @@
+import { ProductFilterPipe } from './products/product-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { ProductListCompnent } from './products/product-list.component';
 import { NgModule } from '@angular/core';
@@ -11,7 +12,8 @@ import { AppComponent }  from './app.component';
     FormsModule ],
   declarations: [ 
     AppComponent,
-    ProductListCompnent ],
+    ProductListCompnent,
+    ProductFilterPipe ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
