@@ -1,3 +1,4 @@
+import { ProductService } from './products/product.service';
 import { StarComponent } from './shared/star.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
 import { FormsModule } from '@angular/forms';
@@ -16,6 +17,7 @@ import { AppComponent }  from './app.component';
     ProductListCompnent,
     ProductFilterPipe,
     StarComponent ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [ ProductService ]   // Injecting/registering service as provider
 })
 export class AppModule { }
