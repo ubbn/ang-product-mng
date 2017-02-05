@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { ProductService } from './products/product.service';
 import { StarComponent } from './shared/star.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
@@ -11,7 +12,8 @@ import { AppComponent }  from './app.component';
 @NgModule({
   imports: [ 
     BrowserModule,
-    FormsModule ],
+    FormsModule,
+    HttpModule ],
   declarations: [ 
     AppComponent,
     ProductListCompnent,

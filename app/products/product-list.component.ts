@@ -16,6 +16,7 @@ export class ProductListCompnent implements OnInit {
   showImage: boolean = false;
   listFilter: string;
   products: IProduct[];
+  errorMessage: string;
 
   // On constructor, we resolve the service from provider
   constructor(private _productService: ProductService){
@@ -23,7 +24,8 @@ export class ProductListCompnent implements OnInit {
 
   // implmenented member of OnInit interface
   ngOnInit(): void {
-    this.products = this._productService.getProducts();
+    this._productService.getProducts()
+      .subscribe(products => this.products = products, error => this.errorMessage = <any>error);
   }
 
   toggleImage() : void {
