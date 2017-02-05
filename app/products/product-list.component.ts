@@ -3,9 +3,9 @@ import { IProduct } from './product'
 
 @Component({
   selector: 'pm-products',
-  // urls here are relative to index.html
-  templateUrl: 'app/products/product-list.component.html',
-  styleUrls: ['app/products/product-list.component.css']  
+  moduleId: module.id,  // it allows to use relative path to access resources in app root dir
+  templateUrl: 'product-list.component.html',
+  styleUrls: ['product-list.component.css']
 })
 
 export class ProductListCompnent {
