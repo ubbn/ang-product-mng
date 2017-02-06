@@ -40,7 +40,9 @@
                 [style.width.px]='imageWidth'
                 [style.margin.px]='imageMargin'>
             </td>
-            <td (click)='onNameClicked(product.productName)'>{{product.productName}}</td>
+            <td (click)='onNameClicked(product.productName)'>
+              <a [routerLink]="['/product', product.productId]">{{product.productName}}</a>
+            </td>
             <td>{{product.productCode | lowercase}}</td>
             <td>{{product.releaseDate}}</td>
             <td (click)='onPriceClicked(product.price)'>{{product.price | currency: 'EUR' : true : '1.2-2' }}</td>

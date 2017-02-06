@@ -1,3 +1,4 @@
+import { ProductDetailComponent } from './products/product-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
@@ -13,6 +14,7 @@ import { AppComponent }  from './app.component';
 
 const appRoutes: Routes = [
   { path: 'products', component: ProductListCompnent },
+  { path: 'product/:id', component: ProductDetailComponent },
   { path: 'welcome', component: WelcomeComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
@@ -27,6 +29,7 @@ const appRoutes: Routes = [
   ],
   declarations: [ 
     AppComponent,
+    ProductDetailComponent,
     ProductListCompnent,
     ProductFilterPipe,
     StarComponent, 
