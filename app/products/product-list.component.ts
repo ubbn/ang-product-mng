@@ -3,7 +3,6 @@ import { ProductService } from './product.service';
 import { IProduct } from './product'
 
 @Component({
-  selector: 'pm-products',
   moduleId: module.id,  // it allows to use relative path to access resources in app root dir
   templateUrl: 'product-list.component.html',
   styleUrls: ['product-list.component.css']

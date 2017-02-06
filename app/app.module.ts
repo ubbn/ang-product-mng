@@ -1,3 +1,5 @@
+import { WelcomeComponent } from './home/welcome.component';
+import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { ProductService } from './products/product.service';
 import { StarComponent } from './shared/star.component';
@@ -9,16 +11,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from './app.component';
 
+const appRoutes: Routes = [
+  { path: 'products', component: ProductListCompnent },
+  { path: 'welcome', component: WelcomeComponent },
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
+];
+
 @NgModule({
   imports: [ 
     BrowserModule,
     FormsModule,
-    HttpModule ],
+    HttpModule,
+    RouterModule.forRoot(appRoutes) 
+  ],
   declarations: [ 
     AppComponent,
     ProductListCompnent,
     ProductFilterPipe,
-    StarComponent ],
+    StarComponent, 
+    WelcomeComponent ],
   bootstrap: [ AppComponent ],
   providers: [ ProductService ]   // Injecting/registering service as provider
 })

@@ -17,10 +17,10 @@ export class ProductService {
   }
 
   getProducts(): Observable<IProduct[]> {
-    return this._http.get(this.productUrl)
-      .map((response: Response) => <IProduct[]>response.json())
+    return this._http.get(this.productUrl) // get returns Response object
+      .map((response: Response) => <IProduct[]>response.json()) // map Response into Product array
       .do(data => console.log('All: ' + JSON.stringify(data)))
-      .catch(this.handleError);
+      .catch(this.handleError);   // Any error ocurred will be handled in this method
   }
 
   private handleError(error: Response) {
