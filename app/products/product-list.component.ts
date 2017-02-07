@@ -8,7 +8,7 @@ import { IProduct } from './product'
   styleUrls: ['product-list.component.css']
 })
 
-export class ProductListCompnent implements OnInit {
+export class ProductListComponent implements OnInit {
   pageTitle: string = 'All Product List';
   imageWidth: number = 50;
   imageMargin: number = 2;
