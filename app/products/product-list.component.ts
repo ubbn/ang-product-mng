@@ -5,12 +5,12 @@ import { IProduct } from './product'
 @Component({
   moduleId: module.id,  // it allows to use relative path to access resources in app root dir
   templateUrl: 'product-list.component.html',
-  styleUrls: ['product-list.component.css']
+  styleUrls : ['product-list.component.css','../app.component.css']
 })
 
 export class ProductListComponent implements OnInit {
-  pageTitle: string = 'All Product List';
-  imageWidth: number = 50;
+  pageTitle: string = 'Product List';
+  imageWidth: number = 20;
   imageMargin: number = 2;
   showImage: boolean = false;
   listFilter: string;
@@ -36,10 +36,10 @@ export class ProductListComponent implements OnInit {
   }
 
   onPriceClicked(price: number): void {
-      this.pageTitle = 'Price: ' + price + ' clicked';
+      this.pageTitle = 'Price is ' + price;
   }
 
   onNameClicked(name: string): void {
-      this.pageTitle = 'Product name: ' + name + ' clicked';
+      this.pageTitle = 'Product name: ' + name;
   }
 }

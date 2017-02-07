@@ -2,6 +2,24 @@ li {
     font-size: large;
 }
 
+div {
+  color: #777777;
+}
+
 div.panel-heading {
-   font-size: x-large; 
+  font-size: x-large;
+  background: #777777;
+  border: none;   
+}
+
+.panel-primary {
+  border: 1px solid #777777;
+}
+
+
+.btn-primary {
+  background: none;
+	padding: 5px 27px;
+	border: 1px solid #777777;
+	color: #777777;
 }

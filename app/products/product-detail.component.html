@@ -1,5 +1,5 @@
 <div class='panel panel-primary' *ngIf='product'>
-    <div class='panel-heading' style='font-size:large'>
+    <div class='panel-heading'>
         {{pageTitle + ': ' + product.productName}}
     </div>
 
@@ -38,7 +38,7 @@
 
             <div class='col-md-6'>
                 <img class='center-block img-responsive' 
-                        [style.width.px]='200' 
+                        [style.width.px]='100' 
                         [style.margin.px]='2' 
                         [src]='product.imageUrl'
                         [title]='product.productName'>

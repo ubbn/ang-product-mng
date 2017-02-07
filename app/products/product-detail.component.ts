@@ -6,6 +6,7 @@ import { IProduct } from './product';
 
 @Component({
   moduleId: module.id,
+  styleUrls : ['../app.component.css'],
   templateUrl: 'product-detail.component.html'
 })
 
